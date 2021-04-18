@@ -2,36 +2,22 @@
 using namespace std;
 int main()
 {
-    int x,n,f=0,d;
+    int n,i,f=0;
+    int a[10]={4,7,47,74,447,474,477,744,747,774};
     cin>>n;
-    d=n;
-    while(d>0)
+    for(i=0;i<10;i++)
     {
-        x=d%10;
-        d=d/10;
-        if(x==4||x==7)
+        if(n==a[i]||(n%a[i]==0))
         {
             f=1;
-        }
-        else
-        {
-            f=0;
             break;
         }
+        else
+            f=0;
     }
     if(f)
-        {
-            cout<<"YES"<<endl;
-        }
-    else{
-        if(n%4==0||n%7==0)
-            {
-                cout<<"YES"<<endl;
-            }
-        else
-            {
-                cout<<"NO"<<endl;
-            }
-    }
+        cout<<"YES"<<endl;
+    else
+        cout<<"NO"<<endl;
     return 0;
 }

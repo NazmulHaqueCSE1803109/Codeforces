@@ -1,19 +1,19 @@
-#include<iostream>
+#include <bits/stdc++.h>
+
 using namespace std;
+
 int main()
 {
-    int i,n;
-    cout<<"enter the number of elements : ";
-    cin>>n;
-    int a[n];
-    cout<<endl<<"enter the value of this array : ";
-    for(i=0;i<n;i++)
-    {
-        cin>>a[i];
+    int n,i,a[10]={4,7,47,74,447,474,477,774,747,744},cnt=0;
+    scanf("%d",&n);
+    for(i=0;i<10;i++){
+    if(n==a[i]||n%a[i]==0){
+        printf("YES\n");
+        break;
     }
-    cout<<endl<<"print the last half elements of this array : ";
-    for(i=(n/2);i<n;i++)
-        cout<<a[i]<<" ";
-    cout<<endl;
+
+    else cnt++;
+    }
+    if(cnt==10) printf("NO\n");
     return 0;
 }
