@@ -19,7 +19,7 @@ int main()
         }
         for(i=0;i<n;i++)
         {
-            if((sqrt(a[i])*sqrt(a[i]))!=a[i])
+            if(((int)sqrt(a[i])*(int)sqrt(a[i]))!=a[i])
                {
                    f=1;break;
                }

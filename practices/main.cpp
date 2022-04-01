@@ -1,31 +1,28 @@
 #include<bits/stdc++.h>
-
 using namespace std;
+
 int main()
 {
-    list<int> l;
-
-    int n1,n2,rn1,rn2;
-    cin>>n1>>n2;
-    while(n1&n2)
+    int n,d,rn=0,mn;
+    cin>>n;
+    mn=n;
+    if(n<0)
     {
-       rn1=n1%10;
-       rn2=n2%10;
-       n1=n1/10;
-       n2=n2/10;
-
-       if(rn1==rn2)
-       {
-           l.push_back(1);
-       }
-       else
-       {
-           l.push_back(0);
-       }
+        cout<<n<<" is not palindrom.\n";
     }
-    l.reverse();
-    list<int>::iterator it;
-    for(it=l.begin();it!=l.end();it++)
-        cout<<*it;
+    else
+    {
+        while(n)
+    {
+      d=n%10;
+      rn=((rn*10)+d);
+      n=n/10;
+    }
+    if(rn==mn)
+        cout<<"n is palindrom number.\n";
+    else
+        cout<<"n is not palindrom number.\n";
+    }
+    
     return 0;
 }
